@@ -33,7 +33,7 @@ defmodule ConfluentSchema.Server do
         password: "secret"
       ]
 
-      children = [{ConfluentSchema.Cache, opts}]
+      children = [{ConfluentSchema.Server, opts}]
       Supervisor.start_link(children, strategy: :one_for_one)
   """
   @spec start_link(Keyword.t()) :: Supervisor.on_start()
