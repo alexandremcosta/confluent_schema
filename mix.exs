@@ -26,6 +26,7 @@ defmodule ConfluentSchema.MixProject do
   defp deps do
     [
       {:confluent_schema_registry, "~> 0.1.1"},
+      {:dialyxir, "~> 1.3", only: [:dev], runtime: false},
       {:ex_json_schema, "~> 0.9.2"},
       {:jason, "~> 1.0"}
     ]
